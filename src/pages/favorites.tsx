@@ -5,12 +5,17 @@ import { FaStar } from "react-icons/fa";
 import { LikesContext } from '../context/FavoritesContext';
 import { FavoritesContainer, Liked, MovieContainer, MoviesContainer } from "../styles/pages/favorites";
 import Image from "next/image";
+import { Head } from 'next/document';
 
 export default function Favorites(){
   const { likedItems, removeMovieFromLiked } = useContext(LikesContext);
   const link= 'https://image.tmdb.org/t/p/w500/';
 
   return(
+    <>
+    <Head>
+      <title>Home | Next Shop</title>
+    </Head>
     <FavoritesContainer>
       <h1>Filmes Favoritos</h1>
       <MoviesContainer>
@@ -34,5 +39,6 @@ export default function Favorites(){
         ))}
       </MoviesContainer>
     </FavoritesContainer>
+    </>
   )
 }

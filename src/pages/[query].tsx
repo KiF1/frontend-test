@@ -2,6 +2,7 @@ import { MoviesContainer, SearchContainer } from "../styles/pages/search";
 import { MovieCard } from "../components/MovieCard";
 import { IMovie } from '../context/FavoritesContext';
 import { GetServerSideProps } from "next";
+import { Head } from 'next/document';
 
 interface MovieProps {
   movies: IMovie[];
@@ -9,6 +10,10 @@ interface MovieProps {
 
 export default function Search({ movies }: MovieProps){
   return (
+    <>
+    <Head>
+      <title>Home | Next Shop</title>
+    </Head>
     <SearchContainer>
       <h1>Resultados da Pesquisa</h1>
       <MoviesContainer>
@@ -17,6 +22,7 @@ export default function Search({ movies }: MovieProps){
         ))}
       </MoviesContainer>
     </SearchContainer>
+    </>
   )
 }
 
