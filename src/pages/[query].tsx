@@ -2,17 +2,18 @@ import { MoviesContainer, SearchContainer } from "../styles/pages/search";
 import { MovieCard } from "../components/MovieCard";
 import { IMovie } from '../context/FavoritesContext';
 import { GetServerSideProps } from "next";
-import { Head } from 'next/document';
+import Head from "next/head";
 
 interface MovieProps {
   movies: IMovie[];
 }
 
 export default function Search({ movies }: MovieProps){
+  
   return (
     <>
     <Head>
-      <title>Home | Next Shop</title>
+      <title>Next+</title>
     </Head>
     <SearchContainer>
       <h1>Resultados da Pesquisa</h1>
@@ -42,5 +43,5 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {
     props: {
       movies
     }
-  }
-}
+  };
+};

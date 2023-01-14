@@ -2,7 +2,7 @@ import { GetStaticProps } from "next";
 import { MovieCard } from "../components/MovieCard";
 import { IMovie } from "../context/FavoritesContext";
 import { HomeContainer, MoviesContainer } from "../styles/pages/home";
-import { Head } from 'next/document';
+import Head from "next/head";
 
 interface MovieProps {
   movies: IMovie[];
@@ -13,7 +13,7 @@ export default function Home({ movies }: MovieProps) {
   return (
     <>
     <Head>
-      <title>Home | Next Shop</title>
+      <title>Next+</title>
     </Head>
     <HomeContainer>
       <h1>Melhores Filmes</h1>
