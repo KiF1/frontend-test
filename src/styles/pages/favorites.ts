@@ -8,6 +8,8 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 gap: 2.5rem;
+margin-top: 250px;
+
 
 h1 {
   color: ${(props) => props.theme.colors.green500};

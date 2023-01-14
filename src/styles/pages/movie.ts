@@ -8,6 +8,7 @@ export const MovieConteiner = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
+  margin-top: 250px;
 
   img{
     width: 100%;
