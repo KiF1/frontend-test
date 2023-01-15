@@ -15,7 +15,8 @@ export const MovieContainer = styled.div`
     width: 100%;
     height: fit-content;
     object-fit: cover;
-    border-radius: 8px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
   }
 
   h1{
