@@ -28,7 +28,7 @@ gap: 1.5rem;
 }
 
 @media (max-width: 768px){
-  grid-template-columns: 1fr;
+  display: none;
 }
 `
 export const MoviesContainer = styled.div`
