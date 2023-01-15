@@ -11,13 +11,6 @@ interface MovieProps {
 }
 
 export default function Search({ movies }: MovieProps){
-  //Loading int the page skeleton effect
-  const [isloading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const timeOut = setTimeout(() =>  setIsLoading(false),  500);
-    return () => clearTimeout(timeOut);
-  }, [])
   
   return (
     <>
@@ -25,24 +18,12 @@ export default function Search({ movies }: MovieProps){
       <title>Next+</title>
     </Head>
     <SearchContainer>
-    {isloading ? (
-             <>
-              <SkeletonContainer>
-                <ProductSkeleton />
-                <ProductSkeleton />
-                <ProductSkeleton />
-              </SkeletonContainer>
-             </>
-            ) : (
-              <>
                 <h1>Resultados da Pesquisa</h1>
                 <MoviesContainer>
                   {movies.map(movie => (
                     <MovieCard key={movie.id} movie={movie} />
                   ))}
                 </MoviesContainer>
-                </>
-            )}
     </SearchContainer>
     </>
   )

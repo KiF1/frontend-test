@@ -11,31 +11,13 @@ import { ProductSkeleton } from "../components/MovieSkeleton";
 export default function Favorites(){
   // Receives from the context all favorite movies and displays, in addition it receives the function to remove from favorites
   const { likedItems, removeMovieFromFavorites } = useContext(ContextAplicattion);
-  //Loading int the page skeleton effect
-  const [isloading, setIsLoading] = useState(true);
   const link= 'https://image.tmdb.org/t/p/w500/';
-
-  useEffect(() => {
-    const timeOut = setTimeout(() =>  setIsLoading(false),  500);
-    return () => clearTimeout(timeOut);
-  }, [])
-
   return(
     <>
     <Head>
       <title>Next+</title>
     </Head>
     <FavoritesContainer>
-    {isloading ? (
-             <>
-              <SkeletonContainer>
-                <ProductSkeleton />
-                <ProductSkeleton />
-                <ProductSkeleton />
-              </SkeletonContainer>
-             </>
-            ) : (
-              <>
             <h1>Filmes Favoritos</h1>
             <MoviesContainer>
               {likedItems.map(movie => (
@@ -57,8 +39,6 @@ export default function Favorites(){
               </MovieContainer>
               ))}
             </MoviesContainer>
-            </>
-            )}
     </FavoritesContainer>
     </>
   )
