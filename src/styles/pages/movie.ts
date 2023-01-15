@@ -32,6 +32,7 @@ gap: 1rem;
 h1{
   font-size: ${(props) => props.theme.fontSize['2xl']};
   color:  ${(props) => props.theme.colors.green500};
+  text-align: center;
   font-weight: bold;
 }
 

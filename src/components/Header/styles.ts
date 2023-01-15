@@ -11,8 +11,8 @@ export const HeaderContainer = styled.div`
   align-items: center;
   background-color: ${(props) => props.theme.colors.green300};
   
-  @media (max-width: 768){
-    height: 200px;
+  @media (max-width: 768px){
+    height: 220px;
   }
 `
 

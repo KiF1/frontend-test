@@ -14,6 +14,7 @@ margin-top: 250px;
 h1 {
   color: ${(props) => props.theme.colors.green500};
   font-size: ${(props) => props.theme.fontSize['2xl']};
+  text-align: center;
   font-weight: bold;
 }
 `
