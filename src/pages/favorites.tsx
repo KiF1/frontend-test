@@ -16,7 +16,7 @@ export default function Favorites(){
   const link= 'https://image.tmdb.org/t/p/w500/';
 
   useEffect(() => {
-    const timeOut = setTimeout(() =>  setIsLoading(false),  2000);
+    const timeOut = setTimeout(() =>  setIsLoading(false),  500);
     return () => clearTimeout(timeOut);
   }, [])
 
