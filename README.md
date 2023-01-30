@@ -9,6 +9,7 @@
 - Utiliza a biblioteca Zod para validação de formulários.
 - Usa a context API para compatilhar os estados entre components, como por exemplo passar os estados dos ciclos para a página History listar os ciclos com seus estados atuais.
 - Utiliza a Reack-hook-forms para gerenciar os estados de dados no formulário
+- Função de dark mode e light mode
 
 
 ## Apresentação do Pojeto:
