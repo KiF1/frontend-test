@@ -13,7 +13,7 @@
 
 
 ## Apresentação do Pojeto:
-
+<img src="./nextflix.gif">
 
 
 ## Gostou do meu projeto? :D Entre em contato comigo! 
